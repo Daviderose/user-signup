@@ -2,17 +2,18 @@
 
 {% block content %}    
 <h1>SignUp</h1>
-<form action="/welcome" method="POST">
+<form action="/validate" method="POST">
     <label>Username: 
-        <input type="text" name="user" placeholder="3-20 characters" />
+        <input type="text" name="user" placeholder="3-20 characters" /> 
     </label>
-    <p class="error">{{user_error}}</p>
+    <p class="error">{{empty_field_error}}</p>
+    <p class="error">{{invalid_chars_error}}</p>
     <label>Password: 
-            <input type="password" name="pass" placeholder="3-20 characters" />
+            <input type="password" name="password" placeholder="3-20 characters" />
     </label>
     <p class="error">{{pass_error}}</p>
     <label>Confirm Password: 
-            <input type="password" name="pass2" placeholder="3-20 characters" />
+            <input type="password" name="password2" placeholder="3-20 characters" />
     </label>
     <p class="error">{{pass2_error}}</p>
     <label>Email (Optional): 
