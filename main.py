@@ -73,9 +73,4 @@ def validate():
         passwords_dont_match_error=passwords_dont_match_error,
         invalid_email_error=invalid_email_error)
 
-'''@app.route('/welcome', methods=['POST'])
-def welcome():
-    user = request.form['user']
-    return render_template('welcome_page.html', title="Welcome Page", name=user)'''
-
 app.run()
